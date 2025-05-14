@@ -19,14 +19,21 @@ Design and implement Python-based applications that:
 # Objective:
 
 ## Build ChatGPT-powered assistant that:
+
 a. Organizes user-input daily tasks.
+
 b. Evolves with progressively advanced prompt engineering.
+
 c. Outputs categorized, prioritized, and optimized to-do lists.
+
 d. Logs data for reuse and review.
 
 ## Build an AI audio content generator that:
+
 a. Accepts user prompts for music, narration, or effects.
+
 b. Interfaces with audio generation APIs.
+
 c. Saves or plays audio.
 
 ## Step-by-Step Implementation – Task Manager:
@@ -46,7 +53,7 @@ Store your API key in a .env file:
 OPENAI_API_KEY=your_openai_key_here
 ```
 ## Step 2: Basic Prompt – Simple Task Listing
-```
+```py
 import os
 import openai
 from dotenv import load_dotenv
@@ -62,13 +69,13 @@ def ask_chatgpt(prompt):
     return response['choices'][0]['message']['content']
 ```
 ### Basic prompt
-```
+```py
 simple_prompt = "Organize my tasks: buy groceries, finish homework, call mom."
 response = ask_chatgpt(simple_prompt)
 print("\nSimple Response:\n", response)
 ```
 ## Step 3: Intermediate Prompt – Add Prioritization and Deadlines
-```
+```py
 intermediate_prompt = (
     "Organize and prioritize these tasks based on urgency and time required: "
     "1. Buy groceries, 2. Finish homework (due tomorrow), 3. Call mom, 4. Reply to emails, 5. Exercise for 30 minutes."
@@ -77,7 +84,7 @@ response = ask_chatgpt(intermediate_prompt)
 print("\nIntermediate Response:\n", response)
 ```
 ## Step 4: Advanced Prompt – Include Categorization, Time Blocks, Suggestions
-```
+```py
 advanced_prompt = (
     "Create a daily schedule using time blocks for the following tasks. Categorize them as personal, academic, or health. "
     "Include any optimization tips: 1. Finish AI assignment (due at 5 PM), 2. Gym session, 3. Buy vegetables, 4. Team meeting at 11 AM, 5. Review notes, 6. Meditation."
@@ -86,7 +93,7 @@ response = ask_chatgpt(advanced_prompt)
 print("\nAdvanced Response:\n", response)
 ```
 ## Step 5: Logging Responses
-```
+```py
 import json
 from datetime import datetime
 
@@ -113,7 +120,7 @@ Install required libraries (example with ElevenLabs):
 pip install elevenlabs
 ```
 ## Step 2: Generate Audio with Prompt Input
-```
+```py
 from elevenlabs import generate, play, set_api_key
 import os
 
