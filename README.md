@@ -1,6 +1,6 @@
 # Exno.8-Prompt-Engg
-## Date:
-## Register no: 212222230066
+## Date:17.05.2025
+## Register no: 212223040074
 # Aim: 
 To develop a prompt-based application using ChatGPT – demonstrating how to create a prompt-driven assistant for organizing daily tasks, with progression from basic to advanced prompt designs.To explore how various prompting techniques can be used to generate and manipulate audio content (e.g., music, sound effects, voice narration) using AI models.
 # Algorithm: 
